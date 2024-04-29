@@ -1,0 +1,441 @@
+* {
+    box-sizing : border-box;
+    margin : 0;
+    padding : 0;
+  }
+  
+  p{
+    font-family : League Spartan;
+    font-weight : 700;
+  }
+  
+  #main-container {
+    position : absolute;
+    height : 650px;
+    width : 375px;
+    background-color : #3a4764;
+    display : flex;
+    flex-direction : column;
+    padding : 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #outer {
+    background-color : #3a4764;
+    height : 650px;
+    width : 375px; 
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #top {
+    height : 10%;
+    margin-bottom : 25px;
+    display: flex;
+    flex-direction: row;
+  }
+  #left, #right {
+    width : 50%;
+  }
+  
+  #left {
+    display : flex;
+    justify-content: flex-start;
+    align-items: center;  
+    font-size : 30px;
+    padding : 5px;
+  }
+  
+  #right {
+    display : flex;
+    flex-direction: row;
+    justify-content : center;
+  }
+  
+  #theme-text, #theme-change {
+    width : 50%;
+    padding : 5px;
+  }
+  
+  
+  #theme-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+  }
+  
+  #theme-text p{
+    font-size : 12px;
+    font-weight : 600;
+    letter-spacing: 1.4px;
+  }
+  
+  #theme-change {
+    display : flex;
+    flex-direction : column;
+  }
+  
+  .theme-number , .theme-controls {
+    padding : 5px;
+  }
+  
+  .theme-number {
+    display : flex;
+    justify-content : space-between;
+    font-size : 12px;
+    font-weight : 600;
+    height : 50%;
+  }
+  
+  .theme-controls {
+    border-radius : 50px;
+    display : flex;
+    justify-content : flex-start;
+    align-items : center;
+    width : 100%;
+    height : 50%;
+    position : relative;
+    z-index : 1;
+  }
+  
+  button.circle {
+    width : 25%;
+    height : 50%;
+    border-radius : 50px;
+    position : absolute;
+    outline : none;
+    border : none;
+    overflow : hidden;
+  }
+  
+  #display {
+    height : 15%;
+    margin-bottom : 25px;
+    border-radius : 9px;
+    font-size : 35px;
+    display: flex; 
+    align-items: center;
+  }
+  
+  .display-output {
+    text-align : right;
+    width : 100%;
+    padding : 15px;
+  }
+  
+  #buttons-grid {
+    width : 100%;
+    height : 80%;
+    border-radius : 9px;
+    display : flex;
+    padding : 10px;
+  }
+  
+  #grid-left, #grid-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap : wrap;
+    flex: 1;
+  }
+  
+  button {
+    width: calc(50% - 10px);
+    height: calc(20% - 10px);
+    margin: 5px; 
+    border-radius : 5px;
+    outline: none;
+    border: none;
+    font-size : 32px;
+  }
+  
+  button.special-key {
+    flex: 2; 
+  }
+  
+  button.special-key, button.grey {
+    font-size : 20px;
+  }
+  
+  @media (min-width : 768px) {
+
+    #outer {
+      width : 1440px;
+      height : 650px;
+    }
+
+    #main-container {
+      width: 450px;
+      position : absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      }
+
+    #top {
+      height : 10%;
+      width : 100%;
+    }
+
+    #display {
+      width : 100%;
+    }
+
+    #buttons-grid {
+      width : 100%;
+    }
+  }
+
+/* styling theme 1-CSS */
+div#outer.theme-1 { 
+  background-color : #3a4764 !important;
+
+}
+
+.theme-1   #main-container {
+  background-color : #3a4764;
+}
+
+.theme-1 #top {
+  color : #ffffff;
+}
+
+.theme-1 .theme-controls {
+  background-color: #232c43;
+}
+
+.theme-1 button.circle {
+  background-color : #d03f2f;
+}
+
+.theme-1 button.circle:hover {
+  background-color: #ff8c8c;
+}
+
+.theme-1 #display {
+  background-color: #182034;
+  color : #ffffff;
+  border : 1px dotted white;
+}
+
+.theme-1 #buttons-grid {
+  background-color: #232c43;
+}
+
+.theme-1 button {
+  color : #444b5a;
+}
+
+.theme-1   button.special-key, button.grey {
+  color : #ffffff;
+}
+
+.theme-1 button.red {
+  background-color : #d03f2f;
+  box-shadow: 0px 4px 0px 0px rgba(147, 38, 26, 0.68);
+}
+
+.theme-1 button.grey {
+  background-color : #637097;
+  box-shadow: 0px 4px 0px 0px rgba(64, 78, 114, 0.68);
+}
+
+.theme-1 button.light {
+  background-color : #eae3dc;
+  box-shadow: 0px 4px 0px 0px rgba(180,165,151,0.68);
+}
+
+.theme-1 button:hover {
+  background-color: #c1ccd9; 
+  cursor: pointer; 
+}
+
+.theme-1 button.red:hover {
+  background-color: #ff8c8c;
+}
+
+.theme-1 button:active {
+  background-color: #a8b1c3; 
+  box-shadow: 0 2px 0 #5f6a7a;
+}
+
+.theme-1 button.red:active {
+  background-color: #ff6666; 
+  box-shadow: 0 2px 0 #5f6a7a;
+}
+
+.theme-1 button.grey:active {
+  background-color: #6e7e8f; 
+  box-shadow: 0 2px 0 #5f6a7a;
+}
+
+/* styling theme 2-CSS */
+.theme-2 #outer { 
+  background-color : #e6e6e6  !important;
+
+}
+
+.theme-2 #main-container {
+  background-color : #e6e6e6;
+}
+
+.theme-2 #top {
+  color : #30302c;
+}
+
+.theme-2 .theme-controls {
+  background-color: #232c43;
+}
+
+.theme-2 button.circle {
+  background-color : #d03f2f;
+}
+
+.theme-2 button.circle:hover {
+  background-color: #ff8c8c;
+}
+
+.theme-2 #display {
+  background-color: #ededed;
+  color : #30302c;
+  border : 1px dotted grey;
+}
+
+.theme-2 #buttons-grid {
+  background-color: #cfc4c4;
+}
+
+.theme-2 button {
+  color : #30302c;
+}
+
+.theme-2 button.special-key, button.grey {
+  color : #ffffff;
+}
+
+.theme-2 button.red {
+  background-color : #662c02;
+  box-shadow: 0px 4px 0px 0px rgba(69, 29, 1, 0.68);
+}
+
+.theme-2 button.grey {
+  background-color : #375b5e;
+  box-shadow: 0px 4px 0px 0px rgba(27, 61, 64, 0.68);
+}
+
+.theme-2 button.light {
+  background-color : #e3dfd3;
+  box-shadow: 0px 4px 0px 0px rgba(156, 148, 138,0.68);
+}
+
+.theme-2 button:hover {
+  background-color: #c1ccd9; 
+  cursor: pointer; 
+}
+
+.theme-2 button.red:hover {
+  background-color: #ff8c8c;
+}
+
+.theme-2 button:active {
+  background-color: #a8b1c3; 
+  box-shadow: 0 2px 0 #5f6a7a;
+}
+
+.theme-2 button.red:active {
+  background-color: #ff6666; 
+  box-shadow: 0 2px 0 #5f6a7a;
+}
+
+.theme-2 button.grey:active {
+  background-color: #6e7e8f; 
+  box-shadow: 0 2px 0 #5f6a7a;
+}
+
+/* styling theme 3-CSS */
+.theme-3 #outer { 
+  background-color : #0e0617  !important;
+
+}
+
+.theme-3 #main-container { 
+  background-color : #0e0617 ;
+}
+
+.theme-3 #top {
+  color : #9e8900;
+}
+
+.theme-3 .theme-controls {
+  background-color: #232c43;
+}
+
+.theme-3 button.circle {
+  background-color : #d03f2f;
+}
+
+.theme-3 button.circle:hover {
+  background-color: #ff8c8c;
+}
+
+.theme-3 #display {
+  background-color: #13091f;
+  color : #9e8900;
+  border : 1px dotted white;
+}
+
+.theme-3 #buttons-grid {
+  background-color: #13091f;
+}
+
+.theme-3 button {
+  color : #9e8900;
+}
+
+.theme-3 button.grey {
+  color : #ffffff;
+}
+
+.theme-3 button.red {
+  background-color : #007069;
+  box-shadow: 0px 4px 0px 0px rgba(14, 179, 170, 0.68);
+  color : #1b1f21;
+}
+
+.theme-3 button.grey {
+  background-color : #300742;
+  box-shadow: 0px 4px 0px 0px rgba(102, 12, 133, 0.68);
+}
+
+.theme-3 button.light {
+  background-color : #281c36;
+  box-shadow: 0px 4px 0px 0px rgba(81, 28, 92, 0.68);
+}
+
+.theme-3 button:hover {
+  background-color: #c1ccd9; 
+  cursor: pointer; 
+}
+
+.theme-3 button.red:hover {
+  background-color: #ff8c8c;
+}
+
+.theme-3 button:active {
+  background-color: #a8b1c3; 
+  box-shadow: 0 2px 0 #5f6a7a;
+}
+
+.theme-3 button.red:active {
+  background-color: #ff6666; 
+  box-shadow: 0 2px 0 #5f6a7a;
+}
+
+.theme-3 button.grey:active {
+  background-color: #6e7e8f; 
+  box-shadow: 0 2px 0 #5f6a7a;
+}
